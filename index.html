@@ -1,0 +1,35 @@
+<html>
+<title></title>
+<head>
+    <link rel="stylesheet" href ="desktop2.css">
+    <link rel="stylesheet" href ="mobile2.css">
+   
+</head>
+<body>
+    <script>
+        function SHOWmenuNAVBar()
+        {
+        document.getElementById('menuNAVBar').style.display = "block";//show contents of div
+        document.getElementById('menuBar').innerHTML = "<a onclick='HIDEmenuNAVBar()' href='javascript:void(0)'><img style='width:60px;float:right' src='hamburger.png'></a>";
+        }
+        function HIDEmenuNAVBar()
+        {
+        document.getElementById('menuNAVBar').style.display = "none";//hide contents of div
+        document.getElementById('menuBar').innerHTML = "<a onclick='SHOWmenuNAVBar()' href='javascript:void(0)'><img style='width:60px;float:right' src='hamburger.png'></a>";
+        }
+</script>
+<div id="container">
+    <div id="banner">
+        <div id="menuBar">
+        <a onclick='SHOWmenuNAVBar()' href ='javascript:void(0)'>
+            <img id = "icon" src="hamburger.png"></a>
+    </div>
+    <div id="menuNAVBar"></div>
+</div>
+    <div id="content"></div>
+    <div id="nav"></div>
+    <div id="contentmobile"></div>
+    <div id="footer"></div>
+</div>
+</body>
+</html>
